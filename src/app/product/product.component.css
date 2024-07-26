@@ -1,0 +1,52 @@
+.card-img {
+  background: #49c1e185;
+}
+
+.stock-badge {
+  top: 16px;
+}
+.in-stock-badge{
+  background-color: #23bf23;
+}
+.out-stock-badge{
+background-color: red;
+}
+
+.desc-space {
+  height: 100px;
+}
+
+.description {
+  font-size: 10px;
+  text-align: justify;
+}
+
+
+.salary-box {
+  bottom: 15px;
+}
+
+.card-dtails{
+  height: 131px;
+}
+.custome-btn {
+  background: #49c1e1;
+  padding: 5px 22px;
+  font-weight: 600;
+  color: white;
+  font-weight: 700;
+}
+.custome-btn:hover{
+  background-color: white;
+  outline: 2px solid #49c1e1;
+  color: #49c1e1;
+  transition: 0.3s;
+}
+
+.gold{
+  color: gold;
+}
+
+.bottom-btn{
+  bottom: 10px;
+}
