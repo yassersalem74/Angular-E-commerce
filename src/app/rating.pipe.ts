@@ -13,13 +13,13 @@ export class RatingPipe implements PipeTransform {
 
     let stars = '';
     for (let i = 0; i < fullStars; i++) {
-      stars += '<i class="fa-solid fa-star gold"></i>';
+      stars += '<i class="fa-solid fa-star gold text-warning"></i>';
     }
     if (halfStar) {
-      stars += '<i class="fa-solid fa-star-half-stroke gold></i>';
+      stars += '<i class="fa-solid fa-star-half-stroke text-warning text-bg-warning></i>';
     }
     for (let i = 0; i < emptyStars; i++) {
-      stars += '<i class="fa-regular fa-star gold></i>';
+      stars += '<i class="fa-regular fa-star text-warning text-bg-warning></i>';
     }
 
     return stars;

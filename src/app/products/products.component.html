@@ -1,7 +1,8 @@
 <div class="p-5 row row-cols-1 row-cols-md-4 g-4">
   @for (product of products; track product.id) {
   <div class="col">
-   <app-product  [productItem]="product"  (handleSendData)="handleReceiveData($event)"></app-product>
+   <!-- <app-product  [productItem]="product"  (handleSendData)="handleReceiveData($event)"></app-product> -->
+   <app-product  [productItem]="product" ></app-product>
   </div>
   } @empty {
   <p>Data not found</p>

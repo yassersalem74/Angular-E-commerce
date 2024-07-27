@@ -1,1 +1,106 @@
-<p>sign-up works!</p>
+<div class="p-5 row row-cols-1 row-cols-md-2 g-5 justify-content-between">
+
+  <div class="d-flex justify-content-center">
+    <img
+      src="https://scribie.com/assets/front/illustrations/Welcome-to-scribie-512x391.svg"
+      alt class="w-75 product-image">
+  </div>
+
+  <div class="container p-5">
+    <form [formGroup]="registerForm" (ngSubmit)="handleSubmitForm()">
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" name="fullName"
+          formControlName="fullName">
+      </div>
+      @if(fullName?.touched && fullName?.invalid){
+      <div class="form-text text-danger">
+        @if(fullName?.hasError('required')){
+        <small>Required</small>
+        } @if(fullName?.hasError('minlength')){
+        <small>Min.length is 3</small>
+        }
+      </div>
+      }
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email"
+        formControlName="email">
+      </div>
+
+      @if(email?.touched && email?.invalid){
+        <div class="form-text text-danger">
+          @if(email?.hasError('required')){
+          <small>Required</small>
+          } @if(email?.hasError('email')){
+          <small>Email Format does not match</small>
+          }
+        </div>
+        }
+
+      <div class="mb-3">
+        <label for="username" class="form-label">User Name</label>
+        <input type="text" class="form-control" id="username" name="username"
+        formControlName="username">
+      </div>
+
+      @if(username?.touched && username?.invalid){
+        <div class="form-text text-danger">
+          @if(username?.hasError('required')){
+          <small>Required</small>
+          } @if(username?.hasError('pattern')){
+          <small>Username cannot contain spaces</small>
+          }
+        </div>
+        }
+
+
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password"
+          name="password"  formControlName="password">
+      </div>
+
+      @if(password?.touched && password?.invalid){
+        <div class="form-text text-danger">
+          @if(password?.hasError('required')){
+          <small>Required</small>
+          } @if(password?.hasError('pattern')){
+          <small>Password does not match</small>
+          }
+        </div>
+        }
+
+
+      <div class="mb-3">
+        <label for="confPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confPassword"
+          name="confPassword">
+      </div>
+
+      @if(confPassword?.touched && confPassword?.invalid){
+        <div class="form-text text-danger">
+          @if(confPassword?.hasError('required')){
+            <small>Required</small>
+            }
+          @if(confPassword?.touched && registerForm.hasError('passwordMismatch') && confPassword?.dirty){
+          <small>does not match</small>
+          }
+        </div>
+        }
+
+
+      <div class="d-flex justify-content-center mb-1">
+        <button type="submit" class="btn custome-btn w-25" [disabled] = 'registerForm'>Register</button>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <p>Already have account ? <a routerLink="/login"
+            class="text-decoration-none fw-bold login">Login</a></p>
+      </div>
+    </form>
+  </div>
+
+</div>
