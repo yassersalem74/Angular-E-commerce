@@ -1,5 +1,5 @@
 <div class="card h-100 position-relative">
-  <img [src]="productItem.images" class="card-img" alt="..." />
+  <img [src]="productItem.thumbnail" class="card-img" alt="..." />
   <div class="card-body">
     @if(productItem.stock == 0){
     <span
@@ -34,9 +34,13 @@
       </div>
     }
 
-
-      <button class="btn custome-btn position-absolute bottom-btn" (click)="handleRedirect(productItem.id)">
-        Add To Cart
+    <div class="d-flex justify-content-between gap-2">
+      <button class="btn custome-btn  bottom-btn" (click)="handleRedirect(productItem.id)">
+        Product Details
       </button>
+      <button class="btn custome-btn  bottom-btn fw-bold"  (click)="increaseCounter()" (click)="addToCart()">
+        +
+      </button>
+    </div>
   </div>
 </div>

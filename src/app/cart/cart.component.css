@@ -1,0 +1,38 @@
+.custome-btn {
+  background: #49c1e1;
+  font-weight: 600;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0px 8px;
+}
+
+.custome-btn:hover {
+  background-color: white;
+  outline: 2px solid #49c1e1;
+  color: #49c1e1;
+  transition: 0.3s;
+}
+
+.total-btn {
+  background: #49c1e1;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.btn-cancel{
+  background-color: red;
+}
+.btn-cancel:hover{
+  background-color: white;
+  outline: 2px solid red;
+  color: red;
+}
+
+.total{
+    padding: 7px;
+    border: 2px solid #49c1e1;
+    border-radius: 8px;
+    margin: 9px;
+}

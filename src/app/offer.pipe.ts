@@ -6,13 +6,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class OfferPipe implements PipeTransform {
 
-  transform(price: number, discountPercentage: number): string {
+  transform(price: number, discountPercentage: number, quantity: number = 1): string {
     if (discountPercentage && discountPercentage > 0) {
       const discountAmount = (price * discountPercentage) / 100;
       const discountedPrice = price - discountAmount;
-      return `${discountedPrice.toFixed(2)}`;
+      return `${(discountedPrice * quantity).toFixed(2)}`;
     }
-    return price.toFixed(2);
+    return `${(price * quantity).toFixed(2)}`;
   }
 
 }

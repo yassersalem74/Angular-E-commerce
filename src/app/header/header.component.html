@@ -10,7 +10,11 @@
         <div class="d-flex gap-3 fs-5 my-nav">
           <a class="nav-link " routerLink="/sign-up"  routerLinkActive="active-route">sign-up</a>
           <a class="nav-link"  routerLink="/login" routerLinkActive="active-route">Login</a>
-          <a class="nav-link"  routerLink="/cart" routerLinkActive="active-route"><i class="fa-solid fa-cart-shopping fs-3"></i></a>
+          <a class="nav-link"  routerLink="/cart" routerLinkActive="active-route"><i class="fa-solid fa-cart-shopping fs-3 position-relative">
+            <div class="count-header">
+              {{ totalItems }}
+            </div>
+          </i></a>
         </div>
       </div>
     </div>

@@ -31,11 +31,12 @@ background-color: red;
 }
 .custome-btn {
   background: #49c1e1;
-  padding: 5px 22px;
+  padding: 6px 13px;
   font-weight: 600;
   color: white;
   font-weight: 700;
 }
+
 .custome-btn:hover{
   background-color: white;
   outline: 2px solid #49c1e1;

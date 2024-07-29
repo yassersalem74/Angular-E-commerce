@@ -1,0 +1,22 @@
+
+.total-btn{
+  background: #49c1e1;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+
+.custome-btn {
+  background: #49c1e1;
+  padding: 7px 27px;
+  font-weight: 600;
+  color: white;
+  font-weight: 700;
+}
+.custome-btn:hover{
+  background-color: white;
+  outline: 2px solid #49c1e1;
+  color: #49c1e1;
+  transition: 0.3s;
+}
